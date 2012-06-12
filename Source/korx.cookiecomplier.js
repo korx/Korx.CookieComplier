@@ -4,6 +4,12 @@ if (!window.Korx) window.Korx = {};
 
 Korx.CookieComplier = {
 
+    text: {
+        question: 'To ensure you get the best possible experience on our website please consent to us using cookies.',
+        allow: 'Allow Cookies',
+        close: 'Close'
+    },
+
     countries: ['BE','BG','CZ','DK','DE','EE','IE','GR','ES','FR','IT','CY','LV','LT','LU','HU','MT','NL','AT','PL','PT','RO','SI','SK','FI','SE','GB'],
 
     construct: function(){
@@ -13,7 +19,21 @@ Korx.CookieComplier = {
         Korx.CookieComplier.attach(window);
     },
 
-    init: function(){
+    init: function(text){
+        // set the question
+        if (typeof text == 'object') {
+            if (typeof text.question == 'string') {
+                Korx.CookieComplier.text.question = text.question;
+            }
+            if (typeof text.allow == 'string') {
+                Korx.CookieComplier.text.allow = text.allow;
+            }
+            if (typeof text.close == 'string') {
+                Korx.CookieComplier.text.close = text.close;
+            }
+        } else if (typeof text == 'string') {
+            Korx.CookieComplier.text.question = text;
+        }
         // attach crumble events to scripts
         var scripts = document.getElementsByTagName("script");
         for (var i = 0; i < scripts.length; i++) {
@@ -124,7 +144,45 @@ Korx.CookieComplier = {
         script.parentNode.insertBefore(geoip, script);
     },
 
-    prompt: function(){ }
+    prompt: function(){
+        if (document.body) {
+            // only prompt if cookies aren't allowed
+            if (!Korx.CookieComplier.allowed()) {
+                // create prompt
+                var prompt = document.createElement('div');
+                prompt.setAttribute('id', 'korx-cookiecomplier-prompt');
+                
+                // create container
+                var container = document.createElement('div');
+                container.setAttribute('id', 'korx-cookiecomplier-container');
+
+                // create cooke question
+                var question = document.createElement('span');
+                question.setAttribute('id', 'korx-cookiecomplier-question');
+                question.appendChild(document.createTextNode(Korx.CookieComplier.text.question));
+
+                // create allow cookies button
+                var allow = document.createElement('a');
+                allow.setAttribute('id', 'korx-cookiecomplier-allow');
+                allow.setAttribute('href', '?_allow_cookies');
+                allow.onclick = function(){ document.body.removeChild(prompt); Korx.CookieComplier.allow(); return false; };
+                allow.appendChild(document.createTextNode(Korx.CookieComplier.text.allow));
+
+                // create close button
+                var close = document.createElement('a');
+                close.setAttribute('id', 'korx-cookiecomplier-close');
+                close.onclick = function(){ document.body.removeChild(prompt); };
+                close.appendChild(document.createTextNode(Korx.CookieComplier.text.close));
+
+                // add elements to prompt then add to document
+                container.appendChild(question);
+                container.appendChild(allow);
+                container.appendChild(close);
+                prompt.appendChild(container);
+                document.body.appendChild(prompt);
+            }
+        }
+    }
 
 };
 
