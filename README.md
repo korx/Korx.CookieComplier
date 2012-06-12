@@ -30,13 +30,13 @@ If you want to take advantage of the geolocation feature, you'll need to have mo
 
 Upload the .htaccess file from the Source directory to the document root of the website. If you already have a .htaccess file in use, then just copy and paste the content of the Korx.CookieComplier .htaccess file to the end of it.
 
-Upload the korx.cookiecomplier.js file from the Source directory to your web server. On all your HTML pages you'll need to add the following as the first `<script>` in the `<head>` tag:
+Upload the korx.cookiecomplier.js file from the Source directory to your web server. On all your HTML pages you'll need to add the following as **the first** `<script>` in the `<head>` tag:
 
     <script src="korx.cookiecomplier.js"></script>
 
 *Note: Change the `src` attributes to the correct location of where you've uploaded the korx.cookiecomplier.js file to e.g. "/scripts/korx.cookiecomplier.js"*
 
-You'll also need to add the following immeditately before the `</head>` tag.
+You'll also need to add the following **immeditately before** the `</head>` tag.
 
     <script defer="defer">Korx.CookieComplier.init();</script>
 
