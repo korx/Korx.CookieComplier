@@ -19,6 +19,7 @@ Korx.CookieComplier is an accessible and unobtrusive EU cookie compliance tool.
 * An Apache 2.2+ web server with:
     * mod_header
     * AllowOverride All (.htaccess files allowed)
+* A server side method of setting a cookie so that users can allow cookies, for example via PHP.
 
 ### Server side support
 
@@ -44,13 +45,13 @@ You'll also need to add the following **immeditately before** the `</head>` tag.
 
 *Note: Don't change the above script tags' `defer` and `async` attributes or positioning within the `<head>` tag otherwise there will be issues in some browsers.*
 
-### Enable users to allow cookies
+## Enabling users to allow cookies
 
 Now all you have to do is create a way for users to allow cookies. This is done by setting the cookie '_allow_cookies' to the value '1'. You can do this via Javascript, PHP, or any other server side language.
 
 An environment variable and cookie '_allow_cookies' will be set if cookies are allowed. You can use this to check if you need to ask the user to allow cookies.
 
-#### PHP
+### PHP
 
 Upload the korx.cookiecomplier.php file from the Source directory to your web server.
 
