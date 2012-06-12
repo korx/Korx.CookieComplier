@@ -32,7 +32,7 @@ Upload the .htaccess file from the Source directory to the document root of the 
 
 Upload the korx.cookiecomplier.js file from the Source directory to your web server. On all your HTML pages you'll need to add the following as the first `<script>` in the `<head>` tag:
 
-    <script src="../Source/korx.cookiecomplier.js"></script>
+    <script src="korx.cookiecomplier.js"></script>
 
 *Note: Change the `src` attributes to the correct location of where you've uploaded the korx.cookiecomplier.js file to e.g. "/scripts/korx.cookiecomplier.js"*
 
