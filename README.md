@@ -48,6 +48,17 @@ You'll also need to add the following **immeditately before** the `</head>` tag.
 
 *Note: Don't change the above script tags' `defer` and `async` attributes or positioning within the `<head>` tag otherwise there will be issues in some browsers.*
 
+### Advanced usage
+
+You can also specify your own consent question by passing it in as a string to the init function:
+
+    <script defer="defer">Korx.CookieComplier.init('We would like to set some cookies');</script>
+
+If you want to change the link texts you can do this by passing in an object to the init function:
+
+    <script defer="defer">Korx.CookieComplier.init({ question:'Can we use cookies?', allow:'Yes', close:'' });</script>
+
+
 ## Enabling users to allow cookies
 
 Now all you have to do is create a way for users to allow cookies. This is done by setting the cookie '_allow_cookies' to the value '1'. You can do this via Javascript, PHP, or any other server side language.
