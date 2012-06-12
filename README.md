@@ -28,7 +28,9 @@ In theory it'll work with any languages executed via the web server, but the Dem
 
 ### Geolocation support
 
-If you want to take advantage of the geolocation feature, you'll need to have mod_geoip from MaxMind loaded in Apache. http://www.maxmind.com/app/mod_geoip
+The client side geolocation feature uses GeoIP from MaxMind http://www.maxmind.com/app/javascript
+
+If you want to take advantage of the server side geolocation feature, you'll need to have mod_geoip from MaxMind loaded in Apache. http://www.maxmind.com/app/mod_geoip
 
 ## How to use
 
