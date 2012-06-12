@@ -2,6 +2,8 @@
 
 Korx.CookieComplier is an accessible and unobtrusive EU cookie compliance tool.
 
+![Screenshot](https://github.com/korx/Korx.CookieComplier/raw/master/Graphics/screenshot.jpg)
+
 ## Benefits
 
 

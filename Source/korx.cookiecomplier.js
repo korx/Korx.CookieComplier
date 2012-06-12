@@ -1,4 +1,25 @@
 /*! © 2012 Korx Limited */
+/*
+---
+name: Korx.CookieComplier
+
+version: 0.1
+
+description: Korx.CookieComplier is an accessible and unobtrusive EU cookie compliance tool.
+
+license: 
+  - MIT-style
+
+authors: 
+  - Michael Bird <michael.bird@korx.com>
+
+requires:
+
+provides: 
+  - Korx.CookieComplier
+
+...
+*/
 
 if (!window.Korx) window.Korx = {};
 
