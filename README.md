@@ -4,9 +4,11 @@ Korx.CookieComplier is an accessible and unobtrusive EU cookie compliance tool.
 
 ## Benefits
 
+
 * Cookies are set by the server or client side code are blocked until the user chooses to accept them. This is much more to the spirit of the EU's Privacy and Communications Directive than an implied consent solution.
 * The end user does not need Javascript enabled for it to work.
 * Existing Javascript code doesn't need changing even if cookies are utilised.
+    * The Javscript code is framework agnostic so will work alongside MooTools, jQuery etc.
     * Google Analytics will work normally without modification. If the user hasn't chosen to allow cookies, visits will still be logged but tracking data won't be stored.
 * Existing server side code doesn't need changing even if cookies utilised.
 * If the user is outside the EU, cookies will be allowed by default without any change to the user experience thanks to geolocation.
