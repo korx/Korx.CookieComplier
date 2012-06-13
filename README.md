@@ -50,6 +50,39 @@ You'll also need to add the following **immeditately before** the `</head>` tag.
 
 *Note: Don't change the above script tags' `defer` and `async` attributes or positioning within the `<head>` tag otherwise there will be issues in some browsers.*
 
+You might also want to style the prompt by putting something like this in your CSS file:
+
+    #korx-cookiecomplier-prompt {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        background: #000000;
+        opacity: 0.8;
+        font-size: 1.2em;
+        color: #ffffff;
+    }
+    #korx-cookiecomplier-container {
+        padding: 1.2em;
+        overflow: hidden;
+    }
+    #korx-cookiecomplier-question {
+        display: block;
+        float: left;
+        width: 100%;
+    }
+    #korx-cookiecomplier-allow {
+        display: block;
+        clear: left;
+        float: left;
+        color: #ffffff;
+    }
+    #korx-cookiecomplier-close {
+        display: block;
+        float: right;
+        color: #555555;
+        cursor: pointer;
+    }
+
 ### Advanced usage
 
 You can also specify your own consent question by passing it in as a string to the init function:
