@@ -74,8 +74,8 @@
 
                 setcookie('test_php', '1');
 
-                echo '<p>'.(isset($_COOKIE['test_php']) ? 'Test php cookie exists' : 'Test php cookie doesn\'t exist').'</p>';
-                echo '<p>'.(isset($_COOKIE['test_javascript']) ? 'Test javascript cookie exists' : 'Test javascript cookie doesn\'t exist').'</p>';
+                echo '<p>'.(isset($_COOKIE['test_php']) ? 'Test PHP cookie exists' : 'Test PHP cookie doesn\'t exist').'</p>';
+                echo '<p>'.(isset($_COOKIE['test_javascript']) ? 'Test JavaScript cookie exists' : 'Test JavaScript cookie doesn\'t exist').'</p>';
 
             ?>
 

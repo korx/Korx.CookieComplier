@@ -8,9 +8,9 @@ Korx.CookieComplier is an accessible and unobtrusive EU cookie compliance tool.
 
 
 * Cookies are set by the server or client side code are blocked until the user chooses to accept them. This is much more to the spirit of the EU's Privacy and Communications Directive than an implied consent solution.
-* The end user does not need Javascript enabled for it to work.
-* Existing Javascript code doesn't need changing even if cookies are utilised.
-    * The Javscript code is framework agnostic so will work alongside MooTools, jQuery etc.
+* The end user does not need JavaScript enabled for it to work.
+* Existing JavaScript code doesn't need changing even if cookies are utilised.
+    * The JavaScript code is framework agnostic so will work alongside MooTools, jQuery etc.
     * There's no need to go changing mime types on script tags or such like.
     * Google Analytics will work normally without modification. If the user hasn't chosen to allow cookies, visits will still be logged but tracking data won't be stored.
 * Existing server side code doesn't need changing even if cookies utilised.
@@ -96,7 +96,7 @@ If you want to change the link texts you can do this by passing in an object to 
 
 ## Enabling users to allow cookies
 
-Now all you have to do is create a way for users to allow cookies. This is done by setting the cookie '_allow_cookies' to the value '1'. You can do this via Javascript, PHP, or any other server side language.
+Now all you have to do is create a way for users to allow cookies. This is done by setting the cookie '_allow_cookies' to the value '1'. You can do this via JavaScript, PHP, or any other server side language.
 
 An environment variable and cookie '_allow_cookies' will be set if cookies are allowed. You can use this to check if you need to ask the user to allow cookies.
 
