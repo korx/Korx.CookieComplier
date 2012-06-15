@@ -17,7 +17,7 @@
                 width: 960px;
             }
             #korx-cookiecomplier-prompt {
-                position: absolute;
+                position: fixed;
                 bottom: 0;
                 width: 100%;
                 background: #000000;
